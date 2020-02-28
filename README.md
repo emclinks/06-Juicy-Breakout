@@ -1,41 +1,35 @@
 # 06-Juicy-Breakout
 
-This is an opportunity for you to implement some of the "juicy" features as demonstrated in the 2012 GDC presentation, "Juice it or Lose it."
+This is my rendition of a recreation of elements from the 2012 GDC presentation "Juice it or Lose it". While technically only adding onto an existing game frame within GODOT, this project is valuable experience in coding and creating various particle, trauma, rotation, trace, and other effects onto future projects created in GODOT.
 
-I have provided a simple, generic brick breaker game, built in Godot. You can use the presentation as a guide or use your own imagination, but your assignment is to make the game feel more "juicy": kinetic, reactive, physical.
+WARNING: This damn thing is loud, louder than I'd personally like anyway. I recommend having your volume mixer at the ready, or have your speakers on low just in case.
 
-Please list the features you add in the README.md. You will be awarded one point per feature you add (including a soundtrack and sound effects). Some of the features demonstrated in the presentation include:
- - Changing the color of the paddle, ball, and blocks
- - Animate how the blocks and the paddle appear on the screen
- - Squeeze and stretch the paddle
- - Animate the size of the ball when it hits something
- - Wobble the ball after it hits something
- - Animate the color of the ball after it hits something
- - Shake the blocks or the paddle when the ball hits something
- - Add sound effects
- - Add music
- - Add particles when a block is hit
- - Add particles when the paddle is hit
- - Make the blocks fall off the screen when they are hit
- - Make the blocks rotate as they are hit
- - Break the blocks when they are hit
- - Add a comet trail to the ball
- - Add screen shake
- - Add eyes to the paddle
- - Make the eyes blink
- - Make the eyes follow the ball
- - Add a smile to the paddle and animate it based on the location of the ball
- - Add a background to the game
- - etc.
+Here is a rough list of all of the featurs I have changed from the general breakout/pong simulator it was:
 
- When you are done, *update the LICENSE and README.md*, commit and push your code to GitHub, and turn in the URL for your repository on Canvas.
+- Changed colors of Paddle, Ball, and Tiles.
+- Animated entry of Paddle and Tiles into frame, randomizing the Tiles' entry.
+- Added Squeeze and Stretch to the Paddle
+- Added a Wobble to the Ball
+- Added a color shift to the Ball upon impact with Tiles
+- Added Shake to the Tiles when the Ball hits them or the Paddle.
+- Added Total Shake to Camera upon Ball hitting Walls, at a stronger frequency.
+- Added sound effects for each collision
+- Added music. Loud but nice.
+- Added Particles when a Tile is hit
+- Added Death Animation to Tiles
+- Added Rotation to Tile Death Animation
+- Added a Dissappear to Tile Death Animation
+- Added Particles when the Ball bounces off the Paddle
+- Added a Comet/Particle Trail to the Ball
+- Added a Background
 
----
+{Unexpectedly made a pong-breakout into a bank-robbery-breakout.}
+[Refused to add Eyes or Mouth to the Paddle. That's just a little too weird for me.]
 
-The grading criteria will be as follows:
 
- - [1 point] Assignment turned in on time
- - [1] Repository contains a descriptive README.md
- - [1] No (script) syntax errors
- - [1] No other runtime errors
- - [16] Features to make the game more "juicy"
+Credits:
+
+WavSource for their list of free .wav sound files for sound effects.
+Patrick de Arteaga for music: https://patrickdearteaga.com/
+That GDC Presentation
+Jason Francis, man trying so hard to help struggling students. 
