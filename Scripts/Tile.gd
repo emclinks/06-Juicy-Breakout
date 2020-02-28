@@ -20,7 +20,7 @@ func _ready():
 	$Tween.interpolate_property(self, "position", position, _target, 2.0, Tween.TRANS_BOUNCE, Tween.EASE_OUT)
 	$Tween.start()
 
-func _process(delta):
+func _process(_delta):
 	if _dying > 0:
 		_dying += _dying_delta
 		position.y += _dying

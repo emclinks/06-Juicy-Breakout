@@ -1,8 +1,28 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Tile.gd" type="Script" id=1]
+[ext_resource path="res://Assets/rigzsoft/Smoke/Cloud1.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 23.27
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 35, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 3.0
+linear_accel_random = 0.5
+damping = 17.2
+damping_random = 0.43
+scale = 0.11
+scale_random = 0.17
+color = Color( 0.396078, 0.368627, 0.490196, 1 )
+hue_variation = 0.04
+hue_variation_random = 1.0
+
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 16 )
 
 [node name="Tile" type="StaticBody2D" groups=[
@@ -14,19 +34,30 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Smoke" type="Particles2D" parent="."]
+emitting = false
+lifetime = 2.0
+one_shot = true
+speed_scale = 3.0
+explosiveness = 0.7
+randomness = 0.5
+local_coords = false
+process_material = SubResource( 3 )
+texture = ExtResource( 2 )
+
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -32.0
 margin_top = -16.0
 margin_right = 32.0
 margin_bottom = 16.0
-color = Color( 0.588235, 0.8, 0.243137, 1 )
+color = Color( 0.364706, 0.611765, 0.486275, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Tween" type="Tween" parent="."]
 

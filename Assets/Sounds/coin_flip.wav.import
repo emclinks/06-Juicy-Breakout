@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/coin_flip.wav-3ff8b2bd70e17d4f99d144f4317ceabe.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/coin_flip.wav"
+dest_files=[ "res://.import/coin_flip.wav-3ff8b2bd70e17d4f99d144f4317ceabe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
